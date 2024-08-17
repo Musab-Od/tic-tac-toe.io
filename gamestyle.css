@@ -1,0 +1,145 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "New Amsterdam", sans-serif;
+}
+
+header {
+    height: 100px;
+    background-image: linear-gradient(to bottom, black, white);
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 60px;
+}
+
+.container {
+    padding: 30px;
+}
+
+.player-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.player-input div {
+    margin: 20px;
+}
+
+.player-input input {
+    width: 145px;
+    height: 20px;
+}
+
+.startbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.btnStart {
+    width: 60px;
+    height: 30px;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.player-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 70px;
+    visibility: hidden;
+}
+
+.player-info h2 {
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.player-info div span {
+    font-size: 25px;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    justify-content: center;
+    align-content: center;
+    visibility: hidden;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    cursor: pointer;
+    position: relative;
+}
+
+.square:hover::before {
+    content: attr(data-hover);
+    position: absolute;
+    color: rgba(0, 0, 0, 0.2);
+    font-size: 48px;
+}
+
+.square.x:hover::before {
+    content: "X";
+}
+
+.square.o:hover::before {
+    content: "O";
+}
+
+.square:first-child,
+.square:nth-child(2),
+.square:nth-child(3) {
+    border-bottom: 3px solid black;
+}
+
+.square:nth-child(7),
+.square:nth-child(8),
+.square:nth-child(9) {
+    border-top: 3px solid black;
+}
+
+.square:nth-child(3n + 1) {
+    border-right: 3px solid black;
+}
+
+.square:nth-child(3n + 3) {
+    border-left: 3px solid black;
+}
+
+.restartbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    visibility: hidden;
+}
+
+.btnRestart {
+    width: 120px;
+    height: 60px;
+    border-radius: 6px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.active {
+    visibility: visible;
+}

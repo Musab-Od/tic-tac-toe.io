@@ -1,0 +1,24 @@
+ticTacToe game
+
+first we need to create the board of the game 3x3;
+
+we need an array and each element should have a unique square on the ui
+
+after making it we need the players where each player has a name and a mark
+
+then the rules:
+gameStart: one of the player should mark a square then switch turn
+
+win condition: 3-in-a-row row/columns/diagonal and if this does not happen then it's a tie
+when game ends we have option to restart the game
+
+first we need a place to select the players/bots before start, then the game board should ne rendered, then winning/losing/tie message and restart action.
+
+
+discussion with Omar (
+    fisrt click  = x need event listner
+)
+
+
+handleclicks = first player mark will fill the index of the gamboard selected and then the ui will change and get x on the screen + when hovering on the cell will get a mark shadow
+after that will switch turns and player two mark will be hit the gamboard ** 
